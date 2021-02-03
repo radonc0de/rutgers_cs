@@ -1,0 +1,60 @@
+Problem 1
+
+a. inputs: int0, int1, int2, int3, int4
+
+b. Outputs: largest integer (either int0, int1, int2, int3, or int4)
+
+c. Error Conditions: negatives inputs, non-integer inputs
+
+d. Pseudocode:
+
+//read integers and check if they're positive
+READ int0 (first integer)
+IF int0 < 0 
+    DISPLAY ERROR           
+READ int1 (second integer) 
+IF int1 < 0 
+    DISPLAY ERROR
+READ int2 (third integer)
+IF int2 < 0 
+    DISPLAY ERROR
+READ int3 (fourth integer)
+IF int3 < 0 
+    DISPLAY ERROR
+READ int4 (fifth integer)
+IF int4 < 0 
+    DISPLAY ERROR
+//individually check each int against others for a possible largest & print largest
+IF int0 >= int1 && int0 >= int2 && int0 >= int3 && int0 >= int4 THEN
+    DISPLAY int0
+ELSE
+    IF int1 >= int0 && int1 >= int2 && int1 >= int3 && int1 >= int4 THEN
+        DISPLAY int1
+    ELSE 
+        IF int2 >= int0 && int2 >= int1 && int2 >= int3 && int2 >= int4 THEN
+            DISPLAY int2
+        ELSE 
+            IF int3 >= int0 && int3 >= int1 && int3 >= int2 && int3 >= int4 THEN
+                DISPLAY int3
+            ELSE 
+                IF int4 >= int0 && int4 >= int1 && int4 >= int2 && int4 >= int3 THEN
+                    DISPLAY int4
+                ENDIF
+            ENDIF
+        ENDIF
+    ENDIF
+ENDIF
+
+e. Test Cases:
+
+1. [1,2,3,4,5] -> [5]
+2. [12,34,56,78,90] -> [90]
+3. [7800,56333,10009,34343434,11] -> [34343434]
+4. [1,1,1,1,1] -> [1]
+5. [9,7,7,7,7] -> [9] 
+
+f. Minimum Number of Operations: Technically 3 if error on first input. If not errors, 15
+
+g. Maximum Number of Operations: 31
+
+

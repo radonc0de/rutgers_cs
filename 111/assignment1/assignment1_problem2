@@ -1,0 +1,60 @@
+Problem 2
+
+a. Inputs: upca //UPC-A code
+
+b. Outputs: "ACCEPT" or "REJECT"
+
+c. Error Conditions: a non-upca code
+
+d. Pseduocode:
+
+//read and check UPC-A code
+READ upca
+IF upca > 999999999999 || upca < 0
+    DISPLAY ERROR
+ENDIF
+//variable declarations
+SET count TO 0
+SET digit TO 0
+SET sum_evens TO 0
+SET sum_odds TO 0
+SET total_sum TO 0
+//while loop for computation
+WHILE count <= 11
+    COMPUTE digit AS upca MODULUS 10
+    COMPUTE upca AS upca / 10 
+    IF count % 2 = 0
+        COMPUTE sum_evens AS sum_evens + digit
+    ELSE
+        IF count % 2  = 1 
+            COMPUTE sum_odds AS sum_odds + digit
+        ENDIF
+    ENDIF
+    COMPUTE count AS count + 1
+ENDWHILE
+//final computations
+COMPUTE sum_evens AS sum_evens MODULUS 10
+COMPUTE sum_odds AS sum_odds MODULUS 10
+COMPUTE sum_odds AS sum_odds * 3
+COMPUTE sum_odds AS sum_odds MODULUS 10
+COMPUTE total_sum AS sum_evens + sum_odds
+COMPUTE total_sum AS total_sum MODULUS 10
+//result
+IF total_sum == 0
+    DISPLAY "ACCEPT"
+ELSE
+    IF total_sum != 0
+        DISPLAY "REJECT"
+    ENDIF
+ENDIF
+
+e. Test Cases:
+ 
+[764666103702] -> ["ACCEPT"] //UPC-A from box of nails
+[689145738940] -> ["ACCEPT"] //UPC-A from book
+[123456789012] -> ["ACCEPT"] //made up UPC-A for error testing that accidentally worked
+[778191020402] -> ["REJECT"] //made up UPC-A for error testing
+
+f. Minimum Number of Operations: 3 if counting an input error, otherwise 94
+
+g. Maximum Number of Operations: 95
