@@ -17,18 +17,116 @@
     \item State the converse, imverse, and contrapositive of English sentences:
     \begin{enumerate}
         \item
-        Converse: If I stay home, it will snow tonight. \\
-        Inverse: If it doesn't snow tonight, I won't stay home. \\
-        Contrapositive: If I don't stay home, it won't snow tonight. \\
+            Converse: If I stay home, it will snow tonight. \\
+            Inverse: If it doesn't snow tonight, I won't stay home. \\
+            Contrapositive: If I don't stay home, it won't snow tonight. \\
         \item
-        Converse: If I go the beach, then it is a sunny summer day. \\
-        Inverse: If it isn't a sunny summer day, then I won't go the beach. \\
-        Contrapositive: If I don't go to the beach, then it isn't a sunny summer day. \\
+            Converse: If I go the beach, then it is a sunny summer day. \\
+            Inverse: If it isn't a sunny summer day, then I won't go the beach. \\
+            Contrapositive: If I don't go to the beach, then it isn't a sunny summer day. \\
         \item
-        Converse: \\
-        Inverse: \\
-        Contrapositive: \\
+            Converse: When I sleep until noon, I absolutely must have stayed up late the previous night. \\
+            Inverse: When I don't stay up late, I don't sleep until noon. \\
+            Contrapositive: When I don't sleep until noon, then I must have not stayed up late the previous night. \\
     \end{enumerate}
+    \item Prove some statements:
+    \begin{enumerate}
+        \item $p \iff q$ is equivalent to $(p \land q) \lor (\lnot p \land \lnot q)$: \\  
+            \begin{tabular}{ |c|c|c|c|c|c| }
+                \hline
+                $p$  &  $q$  &  $p \land q$  &  $\lnot p \land \lnot q$  &  $(p \land q) \lor (\lnot p \land \lnot q)$  &  $p \iff q$ \\
+                \hline
+                T    &  T    &  T            &  F                        &  T                                           &  T          \\
+                \hline
+                T    &  F    &  F            &  F                        &  F                                           &  F          \\
+                \hline
+                F    &  T    &  F            &  F                        &  F                                           &  F          \\
+                \hline
+                F    &  F    &  F            &  T                        &  T                                           &  T          \\
+                \hline
+            \end{tabular}
+        \item $(p \to r) \land (q \to r)$ is equivalent to $(p \lor q) \to r$: \\
+            \begin{tabular}{ |c|c|c|c|c| }
+                \hline
+                $p$ &   $q$ &   $r$ &   $(p \to r) \land (q \to r)$ &   $(p \lor q) \to r$ \\
+                \hline
+                T   &   T   &   T   &   T   &   T   \\                                                                      
+                \hline
+                T   &   T   &   F   &   F   &   F   \\
+                \hline
+                T   &   F   &   T   &   T   &   T   \\
+                \hline
+                T   &   F   &   F   &   F   &   F   \\
+                \hline
+                F   &   T   &   T   &   T   &   T   \\
+                \hline
+                F   &   T   &   F   &   F   &   F   \\
+                \hline
+                F   &   F   &   T   &   T   &   T   \\
+                \hline
+                F   &   F   &   F   &   T   &   T   \\
+                \hline
+            \end{tabular}
+    \end{enumerate}
+    \item Find an expression equivalent to $p \lor q$ using only $\lnot$ and $\land$: \\
+    \begin{enumerate}
+        \item Answer: $\lnot (\lnot p \land \lnot q)$. Proof: \\
+            \begin{tabular}{ |c|c|c|c| }
+                \hline
+                $p$ &   $q$ &   $p \lor q$ &   $\lnot (\lnot p \land \lnot q)$ \\
+                \hline
+                T   &   T   &   T   &   T   \\                                                                      
+                \hline
+                T   &   F   &   T   &   T   \\
+                \hline
+                F   &   T   &   T   &   T   \\
+                \hline
+                F   &   F   &   F   &   F   \\
+                \hline
+            \end{tabular}
+    \end{enumerate}
+    \item Prove that $p \lor (\lnot p \land q) \lor (\lnot p \land \lnot q)$ is a tautology.
+        \begin{enumerate}
+            \item
+                \begin{tabular}{ |c|c|c|c| }
+                    \hline
+                    $p$ &   $q$ &   $p \lor (\lnot p \land q) \lor (\lnot p \land \lnot q)$ \\
+                    \hline
+                    T   &   T   &   T   \\
+                    \hline
+                    T   &   F   &   T   \\
+                    \hline
+                    F   &   T   &   T   \\
+                    \hline
+                    F   &   F   &   T   \\
+                    \hline
+                \end{tabular}
+        \end{enumerate}
+    \item Find a satisfying assignment if one exists for the following, or if not, prove that it's a contradiction: \\ 
+        $(p \lor \lnot q) \land (q \lor \lnot r) \land (\lnot r \lor \lnot p) \land (p \lor q \lor \lnot r) \land (\lnot p \lor \lnot q \lor r)$. \\
+        Starting from the left, either $p$ is true, $q$ is false, or both. \\
+        Test: If $p$ is true, $r$ must be false to make the third epxression true. If $r$ is false, then $q$ must be false in order for the fifth expression to be true. Therefore, $p$ = T, $q$ = F, $r$ = F. \\
+    \item What is the negation of the statement “if you take every quiz, you get a cookie”? \\
+        Answer: "Despite taking every quiz, you did not receive a cookie". \\
+    \item
+        \begin{enumerate}
+            \item $\exists x\; C(x) \land D(x) \land F(x)$
+            \item $\forall x\; C(x) \lor D(x) \lor F(x)$
+            \item $\exists x\; C(x) \land -D(x) \land F(x)$
+            \item $\forall x\; C(x) \oplus D(x) \oplus F(x)$
+            \item $\exists xyz\; C(x) \land D(y) \land F(z)$
+        \end{enumerate}
+    \item Determine truth values of expressions:
+        \begin{enumerate}
+            \item True, $x=-1$
+            \item True, $x=\frac{1}{2}$
+            \item True, works with all real numbers
+            \item False, fails with all negative numbers
+        \end{enumerate}
+    \item
+        \begin{enumerate}
+            \item 
+            \item
+        \end{enumerate}
 \end{enumerate}
-
 \end{document}
