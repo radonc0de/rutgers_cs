@@ -2,7 +2,7 @@ Homework, assignments, projects, etc from my Rutgers Comp Sci journey. Am I majo
 
 | Code | Class                        | Semester   |
 | :---:|------------------------------|------------|
-| 111  | Intro to Comp Sci            | Fall '20   |
-| 205  | Intro to Discrete Structures | Spring '21 |
+| [111](111)  | Intro to Comp Sci            | Fall '20   |
+| [205](205)  | Intro to Discrete Structures | Spring '21 |
 
 
