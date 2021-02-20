@@ -1,0 +1,27 @@
+\documentclass{article}
+\title{CS 205 Homework 2}
+\author{Keith Lehman, kpl56@scarletmail.rutgers.edu}
+
+\usepackage[margin=0.5in]{geometry}
+\usepackage{/home/keithl/Documents/tex-packages/marvosym/tex/latex/marvosym/marvosym}
+
+\begin{document}
+\maketitle
+
+\begin{enumerate}
+\item Prove or disprove: Every odd number is the difference of two squares. \\
+    Disproof: Using 1, the lowest squares are $1^2=1$ and $2^2=4$ which already have a difference of 3. Each successive square beyond these has a large and larger difference in between. Therefore, there does not exist two squares whose difference is equal to 1.
+\item Prove or disprove: If $x > 3$ and $y < 2$, then $x^2 - 2y > 5$. \\
+    Proof: The lowest possible value of $x$ is 4 so the lowest possible value of the first term is $16$ or $(4)^2$. The largest possible value of $y$ of 1, so the largest possible value of the second term is $2$ or $(2)*1$. Under these conditions, the left side is equal to 15, which is greater than 5. As x continues to rise and y continues to decline, this value will continue to rise, but the lowest possible value that can be found is 15.
+\item Prove or disprove: For all real numbers $x>0$, there exists a real number $y$ such that $x=y(y+1)$. \\
+    Proof: $x=y(y+1)$ can be rerranged as $y^2+y-x$. Since x is a constant, this is in the form of a quadratic equation. The quadratic equation $x^2+x+C$ (the base of the aforementioned one) has at least one real zero as long as $C \leq 0.25$, so for the original equation, since the constant $x$ is on the opposite side, as long as x is greater than -0.25 there will be a real number for $y$ that satisfies the equation. Since the original restrictions are $x > 0$, and this shows that $0 > -0.25$, the original statement is true.  
+\item Suppose $2y+3x=3y-4x$, and $x$ and $y$ are not both zero. Prove that $y \neq 0$. \\
+    Disproof: If $y=0$, the equation would be reduced to $3x=-4x$, which could be true if $x=0$ but both numbers are not allowed to equal zero. \Lightning
+\item What is wrong with this "proof"? \\
+    While the statement does ask to prove that $x \neq 5$ AND $y \neq 12$, these conditions need to also be tested individually to make sure that under all cases, $x$ can never be 5 and $y$ can never be 12. Simply setting $x=5$ and $y=9$ will disprove the theory, as $x+y=14$ even though $x=5$, one of the terms $x$ was not allowed to be.  
+\item What is wrong with this "proof"? \\
+
+\end{enumerate}
+
+\end{document}
+
