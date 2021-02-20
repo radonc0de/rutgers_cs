@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.10.19)  20 FEB 2021 15:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.10.19)  20 FEB 2021 15:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -128,7 +128,7 @@ LaTeX Font Info:    Trying to load font information for U+mvs on input line 19.
 Here is how much of TeX's memory you used:
  1214 strings out of 480478
  17096 string characters out of 5905958
- 258858 words of memory out of 5000000
+ 261858 words of memory out of 5000000
  17289 multiletter control sequences out of 15000+600000
  535794 words of font info for 35 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -140,7 +140,7 @@ ts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public
 r17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/sh
 are/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist
 /fonts/type1/public/marvosym/marvosym.pfb>
-Output written on hw_2.pdf (1 page, 69173 bytes).
+Output written on hw_2.pdf (1 page, 73429 bytes).
 PDF statistics:
  36 PDF objects out of 1000 (max. 8388607)
  25 compressed objects within 1 object stream
