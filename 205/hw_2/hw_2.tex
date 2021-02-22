@@ -4,6 +4,7 @@
 
 \usepackage[margin=0.5in]{geometry}
 \usepackage{/home/keithl/Documents/tex-packages/marvosym/tex/latex/marvosym/marvosym}
+\usepackage[dvipsnames]{xcolor}
 
 \begin{document}
 \maketitle
@@ -41,7 +42,7 @@
 \item Prove that for every integer $n$, $n^3$ is even if and only if $n$ is even. \\
     Proof: Assume that an even integer can be presented as 2k, where k is another integer. An odd integer could be represented as 2k+1. If $n$ is an even integer that can be expressed as $2k$, $n^3 = (2k)^3 = 8k^3 = 2(4k^3)$. Therefore, the cube of an even integer will always be even. If $m$ is an odd integer, $m^3$ would be equal to $(2k+1)^3 = 8k^3 + 12k^2 + 6k + 1$ Since $8k^3 + 12k^2 + 6k = 2(4k^3+6k^2+3k)$ is an integer that can be represented as 2(k), the $+1$ at the would mean that this an odd integer. Therefore, the cube of an odd integer will always be an odd integer.
 \item Prove or disprove: If we color each of the integers from 1 to 8 two colors (say, red and blue), then for any coloring, there are three integers $x<y<z$ that have the same color, and $y-x=z-y$ (i.e., $x,y,z$ form an arithmetic progression).
-    Disproof: The combination [Blue, Blue, Red, Red, Blue, Blue, Red, Red] does not have three integers with the same color that would satisfy these conditions. The possiblities are [(1, 2, 5), (1, 2, 6), (2, 5 , 6), (1, 5, 6), (3, 4, 7), (3, 4, 8), (4, 7, 8), (3, 7, 8)]. None of these conditions satisfy the second part of the statement. 
+    Disproof: The combination [\color{Blue} Blue, Blue, \color{Red} Red, Red, \color{Blue} Blue, Blue, \color{Red} Red, Red] \color{Black} does not have three integers with the same color that would satisfy these conditions. The possiblities are [\color{Blue} (1, 2, 5), (1, 2, 6), (2, 5 , 6), (1, 5, 6), \color{Red} (3, 4, 7), (3, 4, 8), (4, 7, 8), (3, 7, 8)\color{Black}]. None of these conditions satisfy the second part of the statement. 
 \end{enumerate}
 
 \end{document}
