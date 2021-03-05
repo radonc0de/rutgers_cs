@@ -1,0 +1,43 @@
+\documentclass{article}
+\title{CS 205 Homework 3}
+\author{Keith Lehman, kpl56@scarletmail.rutgers.edu}
+
+\usepackage[margin=0.5in]{geometry}
+
+\begin{document}
+\maketitle
+
+\begin{enumerate}
+\item Prove the following distributive law: $A \cup (B \cap  C) = (A \cup B) \cap (A \cup C)$ \\
+    If the left side were a set, it would contain all of $A$, as well as the intersection of $B$ and $C$. So for the set $L$ that is the left side, $A \subseteq L$, and $(B \cap C) \subseteq L$. \\
+    For the set $R$ that is the right side, the union of everything in $A + B$ and everything in $A + C$ would contain everything in $A$ since everything in $A$ is also in $A$. It would also contain all elements at the intersection of $B$ and $C$. So, like $L$, $A \subseteq R$, and $(B \cap C) \subseteq R$. Since both sides have the exact same components, they must be equal.
+\item Suppose $A \subseteq B$ and $C \subseteq D$. Show that $A \times C \subseteq B \times D$. \\
+    Since $A$ is a subset of $B$ and $C$ is a subset of $D$, $\forall x (x \in A \Longrightarrow x \in B) \land \forall y (y \in C \Longrightarrow y \in D)$. Therefore, any products that can be created between $A$ and $C$ will also be products that can be created between $B$ and $D$. Therefore, ($A \times C \subseteq B \times D)$.
+\item Prove that $A - (B \cap C) = (A - B) \cup (A - C)$. \\
+    The left side is $A$ minus any elements of $B$ that are also in $C$. The right side is two operations, $A - B$ and $A - C$. After doing both of these and creating a set of the union of both, what will remain is A minus the elements of B that are also in C because for example, for $x \in A \land x \in B \land x \notin C$, $x$ will be subtracted from $A$ in $A-B$ but not in $A-C$, so $(A-B) \cup (A-C)$ will still contain $x$ becuase it will not be removed from $A$ in $A-C$. Only elements that are in both $B$ and $C$ will not be included, alike the left side.
+\item An ordered pair $(a, b)$ can be defined as the set ${a, {a,b}}$. Show that $(a,b) = (c,d)$ if and only if $a=c$ and $b=d$.
+    For an ordered pair to be equal to ${a, {a,b}}$, by the definition of an ordered pair, the first term of the ordered pair must be equal to $a$ and the second must be equal to $b$. There are no exceptions to this. Therefore, for $(a,b)=(c,d)$, $c$ must equal $a$ and $d$ must equal $b$. 
+\item Let $f: R \rightarrow R$ be defined by $f(x) = 4x^3-2$.
+    \begin{enumerate}
+    \item Is $f$ injective? \\
+       $f$ is injective since it maps to each member of the codomain once and never more than once.  
+    \item Is $f$ surjective? \\
+       $f$ is surjective since it maps to each member of the codomain once.  
+    \end{enumerate}
+\item Let $S = P(R)$. Let $f: R \to S$ be defined by $f(x) = {y \in R: y^2 < x}$.
+    \begin{enumerate}
+    \item Is $f$ injective? \\
+        $f$ is not injective because for any given value of $x$, there are multiple values of y that can satisfy the equation. 
+    \item Is $f$ surjective?
+        $f$ is not surjective. While all members of the reals are mapped to, the empty set is not and cannot be mapped to with the given function. 
+    \end{enumerate}
+\item Suppose $f: A \to B$ and $g: B \to C$. 
+    \begin{enumerate}
+    \item Prove that if $f$ is surjective and $g$ is not injective, $g \circ f$ is not injective. \\
+        While every element of $B$ is mapped to by an element of $A$, since $g$ is not injective, there are elements of $C$ that are mapped to more than once by values of $B$. Therefore, for $g \circ f = A \to B \to C$, there will be multiple elements of $A$ that will map to the same element in $C$, making $g \circ f$ not injective.
+    \item Prove that if $f$ is not surjective and $g$ is injective, $g \circ f$ is not surjective. \\
+    While there are no elements of $C$ mapped to more than once by elements of $B$, not all elements of $B$ are mapped to by elements of $A$. Therefore, since each element in $B$ maps to a unique element in $C$, but not every element in $B$ is mapped to by an element of $A$, there will be elements of $C$ not mapped to by elements of $A$, making $g \circ f$ not surjective.
+    \end{enumerate}
+\item Suppose $f: B \to C$, $g: A \to B$, and $h: A \to B$. If $f$ is injective, prove that if $f \circ g = f \circ h$, then $g=h$. 
+\end{enumerate}
+\end{document}
