@@ -38,6 +38,9 @@
     \item Prove that if $f$ is not surjective and $g$ is injective, $g \circ f$ is not surjective. \\
     While there are no elements of $C$ mapped to more than once by elements of $B$, not all elements of $B$ are mapped to by elements of $A$. Therefore, since each element in $B$ maps to a unique element in $C$, but not every element in $B$ is mapped to by an element of $A$, there will be elements of $C$ not mapped to by elements of $A$, making $g \circ f$ not surjective.
     \end{enumerate}
-\item Suppose $f: B \to C$, $g: A \to B$, and $h: A \to B$. If $f$ is injective, prove that if $f \circ g = f \circ h$, then $g=h$. 
+\item Suppose $f: B \to C$, $g: A \to B$, and $h: A \to B$. If $f$ is injective, prove that if $f \circ g = f \circ h$, then $g=h$.  \\
+    $f$ being injective means that no elements of $C$ are mapped to more than once by $B$. So, only one element of A can map to an element of B. Since this is true, $g$ and $h$ have to be equal in order for $f \circ g = f \circ h$ to be true as $g$ and $h$ both map $A \to B$.
+\item Suppose $f: A \to B$ is injective. Show that there exists a $B^\prime \subseteq B$ such that $f^-1 : B^\prime \to A$. \\
+    Since $f$ is injective, there are no two elements of $A$ that map to the same element in $B$. Since it was not stated that $f$ is surjective, we can assume that $A$ is surjective to a certain subset of $B$ that we can call $B^\prime$. This subset $B^\prime$ will be able to map to every element of $A$, making $f^-1$ valid.
 \end{enumerate}
 \end{document}
