@@ -1,4 +1,4 @@
-Homework, assignments, projects, etc from my Rutgers Comp Sci journey. Am I majoring, minoring, not doing Comp Sci at all? Who knows?
+Homework, assignments, projects, etc from my Rutgers Comp Sci journey.
 
 | Code       | Class                        | Semester   |
 | :---------:|------------------------------|------------|
