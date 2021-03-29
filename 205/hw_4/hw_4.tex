@@ -1,0 +1,30 @@
+\documentclass{article}
+\title{CS 205 Homework 4}
+\author{Keith Lehman, kpl56@scarletmail.rutgers.edu}
+
+\usepackage[margin=0.5in]{geometry}
+\usepackage{amssymb}
+
+\begin{document}
+\maketitle
+
+\begin{enumerate}
+
+\item \textbf{Show that for any $n \in N$, $\sum_{k=0}^{n} k^2 = \frac{n(n+1)(2n+1)}{6}$.} \\
+Proving $n \to n+1$: \\
+Assume for $k=n$: $0^2 + 1^2 + 2^2 + 3^2 + 4^2 + .. + n^2 = \frac{n(n+1)(2n+1)}{6}$. \\
+Then for $k=n+1$: $0^2 + 1^2 + 2^2 + 3^2 + 4^2 + .. + n^2 + (n+1)^2 = \frac{(n+1)(n+2)(2n+3)}{6}$. \\
+Since both contain $0^2 + 1^2 + 2^2 + 3^2 + 4^2 + .. + n^2$, this can be substituted for $\frac{n(n+1)(2n+1)}{6}$. \\
+Therefore, $\frac{n(n+1)(2n+1)}{6} + (n+1)^2 = \frac{(n+1)(n+2)(2n+3)}{6}$. \\
+Expanding these results in: $\frac{2n^3 + 9n^2 + 13n + 6}{6} = \frac{2n^3 + 9n^2 + 13n + 6}{6}$. $\blacksquare$
+
+\item \textbf{Show that for any $n \in N$ where $n \geq 1$, $\prod_{k=1}^{n} (1 + \frac{1}{k}) = n + 1$.} \\
+Proving $n \to n+1$: \\
+Assume for $k=n$: $(1+1) * (1+\frac{1}{2}) * (1+\frac{1}{3}) * .. * (1+\frac{1}{n}) = (n+1)$. \\
+Then for $k=n+1$: $(1+1) * (1+\frac{1}{2}) * (1+\frac{1}{3}) * .. * (1+\frac{1}{n}) * (1+\frac{1}{n+1})= (n+2)$ \\
+Since both contain $(1+1) * (1+\frac{1}{2}) * (1+\frac{1}{3}) * .. * (1+\frac{1}{n})$, this can be substituted for $(n+1)$. \\
+Therefore, $n+1 * (1+\frac{1}{n+1}) = (n+2)$. \\
+Expanding the left side results in $(n+2)$ and $n+2 = n+2$. $\blacksquare$
+
+\end{enumerate}
+\end{document}
