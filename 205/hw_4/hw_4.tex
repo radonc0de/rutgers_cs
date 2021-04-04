@@ -44,6 +44,14 @@ Reasoning: For each additional pentagonal number, part of the previous remains. 
 \item \textbf{What is wrong with the "proof"?} \\
 $n$ is being defined as the number of horses. By the claim, 'number of horses' must refer to 'all horses' since the claim is stating that all horses are the same color. The error is setting $n=1$. Unless every horse besides one were to suddenly disappear, $n$, which is defined as the number of horses, cannot now be assigned with the number 1.
 
+\item \textbf{Prove that for all $n \geq 1$ it's possible to lay these tiles down to cover a $2^n \times 2^n$ square, with one corner square left uncovered.} \\
+Base Case: When $n = 1$, the $2 \times 2$ square can be filled with one L, and have one corner uncovered. \\
+Proving $n \to n+1$: Assuming that it is true that Ls will be able to cover a square of size $2^n \times 2^n$ with one corner left uncovered, a square of size $2^{n+1} \times 2^{n+1}$ is actually the same as $2^n \times 2^n \times 4$, or the original square 4 times. Since the original square had one corner left empty, 4 replicas would result in 4 empty tiles. 3 of these 4 empty tiles can be covered with an L and there will again be 1 corner left uncovered.$\blacksquare$ \\
 
+\item \textbf{Prove that this program is correct} \\
+If the value of $x$ is lower than the value of $y$, $z$ is set to the value of $x$. This proves the first part of the postcondition. If this is not the case, than the $z$ is set equal to $y$, resulting in the second part of the postcondition. By the logic in the program, if the first part of the postcondition is not met, the second is guaranteed. $z$ will either be set to $x$, if it is lower than $y$, or $y$ if both numbers are equal or if $y$ is lower than $x$. $\blacksquare$
+
+\item \textbf{Prove that this program is correct} \\
+While this program operates, it continues to subtract $b$, which through the precondition is a positive number, from $r$, which contains the value of $a$, which through the precondition is also a positive number. It also adds 1 to $q$ each time it does this. Since $b$ remains constant, continuing to subtract $b$ from $r$ will eventually lead to $r$ being less than $b$ and the loop halting. At this point, $q$ will be equal to the amount of times $b$ was subtracted from $r$ and $r$ is now equal to what is left over after $b$ was subtracted $q$ times from it. This is what the postconditon states. $\blacksquare$
 \end{enumerate}
 \end{document}
